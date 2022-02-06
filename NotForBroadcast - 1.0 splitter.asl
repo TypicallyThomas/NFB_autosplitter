@@ -87,7 +87,7 @@ reset
 
 isLoading
 {
-    if (current.NextScene == "Incident System" && current.ThisScene.StartsWith("0")) return false;
+    if (current.NextScene == "Incident System" && (current.ThisScene.StartsWith("0") || current.ThisScene.StartsWith("1"))) return false;
     return current.ThisScene != current.NextScene ||
            vars.AdditionalPauses.Contains(current.ThisScene);
 }
